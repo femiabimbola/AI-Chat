@@ -1,10 +1,14 @@
 interface MaxWidthWrapperProps {
-  className: string;
+  className?: string;
   children: React.ReactNode;
 }
 
 const MaxWidthWrapper = ({className, children}: MaxWidthWrapperProps) => {
-  return <div> Max with Wrapper</div>;
+  return (
+    <div className="mx-auto w-full max-w-screen-xl px-2.5 md:px-20">
+      {children}
+    </div>
+  );
 };
 
 export default MaxWidthWrapper;
