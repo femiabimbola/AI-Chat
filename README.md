@@ -1,1 +1,1 @@
-### The AI Chat
+### Chat with PDFs
