@@ -1,4 +1,4 @@
-import {cn} from "@/lib/utlis";
+import {cn} from "@/lib/utils";
 
 interface MaxWidthWrapperProps {
   className?: string;
