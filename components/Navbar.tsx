@@ -19,6 +19,7 @@ const Navbar = () => {
               >
                 Pricing
               </Link>
+              {/* todo: add login below */}
             </>
           </div>
         </div>
