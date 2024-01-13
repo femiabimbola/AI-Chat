@@ -13,6 +13,7 @@ const Providers = ({children}: PropsWithChildren) => {
     })
   );
   return (
+    //It allow trpc to be used in any of the folder
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </trpc.Provider>
