@@ -6,7 +6,13 @@ const AuthCallback = () => {
   const searchParams = useSearchParams();
   const origin = searchParams.get("origin");
 
-  const {data,isLoading} = trpc.test.useQuery();
+  const {data, isLoading} = trpc.authCallback.useQuery(undefined, {
+    onSuccess: ({success}) => {
+      if (success) {
+        router.push("");
+      }
+    },
+  });
   return <div> Auth callback</div>;
 };
 
