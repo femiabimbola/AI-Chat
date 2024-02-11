@@ -9,7 +9,7 @@ const AuthCallback = () => {
   const {data, isLoading} = trpc.authCallback.useQuery(undefined, {
     onSuccess: ({success}) => {
       if (success) {
-        router.push("");
+        router.push(origin ? `/${origin}` : "/dashboard");
       }
     },
   });
