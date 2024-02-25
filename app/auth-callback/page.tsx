@@ -25,7 +25,7 @@ const AuthCallback = () => {
       }
     },
     retry: true,
-    retryDelay: 500,
+    retryDelay: 2500,
   });
   return (
     <div className="w-full mt=24 flex justify-center">
