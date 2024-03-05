@@ -11,12 +11,13 @@ export const appRouter = router({
 
   authCallback: publicProcedure.query(async () => {
     const { getUser } = getKindeServerSession()
-    const user =  getUser()
-
-   
-    if (!user.id || !user.email) throw new TRPCError({code:"UNAUTHORIZED"})
+    const user = await getUser()
 
     console.log("hey there o")
+    
+    if (!user?.id || !user?.email) throw new TRPCError({code:"UNAUTHORIZED"})
+
+    console.log("hey there !!!")
     // check if the user is in the database
     const dbUser = await db.cWPuser.findFirst({
       where: { id: user.id }
